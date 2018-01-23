@@ -1,0 +1,27 @@
+01-23 14:27:40.503 32622-436/com.example.interceptordemo I/TAG: Sending request %s on %s%n%s请求中。。。http://news-at.zhihu.com/api/4/news/latestnull请求头Accept-Language: zh-CN,zh;q=0.8
+                                                                User-Agent: Mozilla/5.0 (Linux; U; Android 6.0.1; zh-cn; OPPO R9sk Build/MMB29M) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30
+01-23 14:27:40.591 32622-436/com.example.interceptordemo I/TAG: Received response for %s in %.1fms%n%s结果中。。。http://news-at.zhihu.com/api/4/news/latest时间区87.920729请求头Date: Tue, 23 Jan 2018 06:27:41 GMT
+                                                                Content-Type: application/json; charset=UTF-8
+                                                                Transfer-Encoding: chunked
+                                                                Connection: keep-alive
+                                                                Etag: W/"cc30609ea231a6dd350d83b6b83c4035d5c0f87a"
+                                                                X-Backend: zhihu-daily.zhihu-daily-web.77ffbd02
+                                                                X-Backend-Server: zhihu-daily.zhihu-daily-web.77ffbd02---10.4.14.2:31007[10.4.14.2:31007]
+                                                                X-Req-ID: FB2F2855A66D5DD
+                                                                Server: ZWS
+                                                                Vary: Accept-Encoding
+
+
+下面是拦截器中添加头（User-Agent中，案例A，上面为空 案例B 为 下面为OkHttp Example）
+01-23 14:45:41.682 4077-4372/com.example.interceptordemo I/TAG: Sending request %s on %s%n%s请求中。。。http://news-at.zhihu.com/api/4/news/latestnull请求头Accept-Language: zh-CN,zh;q=0.8
+                                                                User-Agent: OkHttp Example
+01-23 14:45:41.730 4077-4372/com.example.interceptordemo I/TAG: Received response for %s in %.1fms%n%s结果中。。。http://news-at.zhihu.com/api/4/news/latest时间区47.84474请求头Date: Tue, 23 Jan 2018 06:45:42 GMT
+                                                                Content-Type: application/json; charset=UTF-8
+                                                                Transfer-Encoding: chunked
+                                                                Connection: keep-alive
+                                                                Etag: W/"4fec9b0195031088ba797b486680ddb4c071cf2c"
+                                                                X-Backend: zhihu-daily.zhihu-daily-web.4fd54788
+                                                                X-Backend-Server: zhihu-daily.zhihu-daily-web.4fd54788---10.3.163.2:31006[10.3.163.2:31006]
+                                                                X-Req-ID: F81AF515A66DA13
+                                                                Server: ZWS
+                                                                Vary: Accept-Encoding
